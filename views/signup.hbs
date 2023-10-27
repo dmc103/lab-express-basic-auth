@@ -16,8 +16,13 @@
       <button type="submit">Submit</button>
     </form>
     <br />
+    {{#if errorMessage}}
+      <div id="exist" class="error">{{errorMessage}}</div>
+    {{/if}}
+    <br />
 
     <a href="/">Back to Home</a>
 
   </body>
+
 </html>
