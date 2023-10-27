@@ -6,15 +6,19 @@
   </head>
   <body>
     <h2>Welcome back, Log in here!</h2>
-    <form action="/signup" method="POST">
+    <form action="/login" method="POST">
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" required />
 
       <label for="password">Password:</label>
       <input type="password" name="password" required />
 
-      <button type="submit">Submit</button>
+      <button type="submit">Log In</button>
     </form>
+    <br />
+    {{#if errorMessage}}
+      <div id="exist" class="error">{{errorMessage}}</div>
+    {{/if}}
     <br />
 
     <a href="/">Back to Home</a>
