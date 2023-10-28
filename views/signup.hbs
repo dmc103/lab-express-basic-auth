@@ -10,6 +10,9 @@
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" required />
 
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+
       <label for="password">Password:</label>
       <input type="password" name="password" required />
 
@@ -18,10 +21,15 @@
     <br />
     {{#if errorMessage}}
       <div id="exist" class="error">{{errorMessage}}</div>
+      {{#if showLogin}}
+        <button onclick="window.location.href='/login'">Login</button>
+      {{/if}}
+
     {{/if}}
     <br />
+    <br />
 
-    <a href="/">Back to Home</a>
+    <button onclick="window.location.href='/'">Home</button>
 
   </body>
 
